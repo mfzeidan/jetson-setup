@@ -1,32 +1,10 @@
 # Setup Jetson via GitHub
 
+✅ **Repository is already on GitHub!**  
+📦 **Repository**: https://github.com/mfzeidan/jetson-setup  
+🔗 **Clone URL**: `https://github.com/mfzeidan/jetson-setup.git`
+
 Since you're using GitHub to transfer files, here's the quickest way to get the setup scripts onto your Jetson.
-
-## Option 1: GitHub Repository (Recommended)
-
-### On Your Mac (now):
-
-1. **Create a new GitHub repository**:
-   - Go to https://github.com/new
-   - Name it something like `jetson-setup` or `jetson-orin-nano`
-   - Make it public or private (your choice)
-   - **Don't** initialize with README, .gitignore, or license
-   - Click "Create repository"
-
-2. **Push your local files**:
-   ```bash
-   cd /Users/markzeidan/Documents/source/jetson2
-   
-   # Add remote (replace YOUR_USERNAME and REPO_NAME with your GitHub details)
-   git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
-   
-   # Commit files
-   git commit -m "Initial commit: Jetson SSH and vision setup scripts"
-   
-   # Push to GitHub
-   git branch -M main
-   git push -u origin main
-   ```
 
 ### On Your Jetson:
 
@@ -34,8 +12,8 @@ Once you have basic SSH access or direct console access on your Jetson:
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/REPO_NAME.git
-cd REPO_NAME
+git clone https://github.com/mfzeidan/jetson-setup.git
+cd jetson-setup
 
 # Run the SSH setup script
 chmod +x setup_jetson_ssh.sh
@@ -48,7 +26,7 @@ If you don't want to install git on the Jetson, you can download individual file
 
 ```bash
 # On Jetson, download the setup script directly
-curl -O https://raw.githubusercontent.com/YOUR_USERNAME/REPO_NAME/main/setup_jetson_ssh.sh
+curl -O https://raw.githubusercontent.com/mfzeidan/jetson-setup/main/setup_jetson_ssh.sh
 chmod +x setup_jetson_ssh.sh
 ./setup_jetson_ssh.sh
 ```
