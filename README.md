@@ -113,6 +113,22 @@ EOF
 
 ## Troubleshooting
 
+### ⚠️ Cursor Shows "No route to host" but Terminal SSH Works
+
+**Problem**: Cursor Remote-SSH shows "No route to host" but `ssh jetson` works fine from terminal.
+
+**Solution**: **Enable Local Network permission for Cursor in macOS!**
+
+1. **System Settings** → **Privacy & Security** → **Local Network**
+2. Find **Cursor** in the application list
+3. **Enable the toggle switch** (should be ON/blue)
+4. Reload Cursor: `Cmd+Shift+P` → "Developer: Reload Window"
+5. Try connecting again
+
+**Why**: Terminal SSH has system-level permissions, but Cursor needs explicit Local Network access permission. This is the #1 cause of this issue!
+
+See `CRITICAL_FIX.md` for more details.
+
 ### Connection Refused / Cannot Connect
 
 **Problem**: `ssh: connect to host 192.168.1.207 port 22: Connection refused`
